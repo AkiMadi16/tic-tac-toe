@@ -1,0 +1,91 @@
+
+body {
+    text-align: center;
+    background-color:rgb(137, 207, 245);
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    padding-bottom: 50px;
+    margin: 0 0 0 50px;
+   color: rgb(241, 112, 209);
+    text-align: center;
+    text-decoration: double;
+    font-size: 100px;
+  } 
+
+h1 {
+    animation: colorFade 10s infinite;
+
+}
+
+@keyframes colorFade {
+    0% {
+        filter: drop-shade(6px 6px 6px rgb(255, 150, 300));
+    }
+    20% {
+        filter: drop-shadow(6px 6px 6px rgb(255, 150, 100));
+    }
+    40% {
+        filter: drop-shadow(6px 6px 6px rgb(255, 200, 200))
+    }
+    60% {
+        filter: drop-shadow(6px 6px 6px rgb(255, 150, 250));
+    }
+    80% {
+        filter: drop-shadow(6px 6px 6px rgb(100, 110, 255));
+    }
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    gap: 2px;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid black;
+    font-family: sans-serif;
+    font-size: 100px;
+    width:50%;
+    background-color: rgb(198, 242, 153);
+    
+   
+}
+
+.box {
+    border: 1px solid black;
+    padding: 20px;
+    height:100px;
+    width: 100px;
+    margin: 0 auto;
+
+    
+  }
+
+.buttons {
+    padding: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 50px;
+    background-color: rgb(228, 241, 89);
+    
+    }
+  
+  text {
+        margin: 0 auto;
+        display: inline;
+        padding: 30px;
+  }
+
+
+
+  
