@@ -18,8 +18,10 @@
         } else {
           box.textContent = 'O';
         }
+        //Increment count on each click
         turnCounter++
       } 
+      //Check for win on every click
       winningCondition()  
     })
     
@@ -63,9 +65,33 @@
         console.log('keep Playing')
       }
     }
+    
+    // Enable Buttons for start, restart and quit
 
+    var restartButton = document.querySelector('#restart')
+    restartButton.addEventListener('click', function()  {
+      var boxes = document.querySelectorAll('.box')
+      for(let i = 0; i < boxes.length; i++) {
+          boxes[i].textContent = '';
+      }  
+      document.querySelector('#boxTop').textContent = '';
+      document.querySelector('#boxBottom').textContent = '';
+      document.querySelector('#player1Name').textContent = '';
+      document.querySelector('#player2Name').textContent = '';
 
+      var playerOne = prompt('Enter your Name?')
+      document.querySelector('#player1Name').textContent = playerOne;
+  
+      var playerTwo = prompt('Enter your Name')
+      document.querySelector('#player2Name').textContent = playerTwo;
+    })
 
+    var playerOne = prompt('Enter your Name?')
+      document.querySelector('#player1Name').textContent = playerOne;
+  
+      var playerTwo = prompt('Enter your Name')
+      document.querySelector('#player2Name').textContent = playerTwo;
+  
       
 
    
