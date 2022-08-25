@@ -91,12 +91,17 @@ button {
         padding: 30px;
   }
 
-  #boxTopBottom {
+  #boxTop {
     padding: 10px 20px;
     margin: 0 50px;
     background-color: rgb(130, 104, 246);
   }
 
+  #boxBottom {
+    padding: 10px 20px;
+    margin: 0;
+    background-color: rgb(130, 104, 246);
+  }
 
 
   
