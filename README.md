@@ -20,7 +20,7 @@ HTML was used for building the content of the website, CSS for styling and JS fo
 - Add in-app screenshots.
 
 ## :pencil2: Planning & Problem Solving
-- Initial stage of planning was easy for me but later I have  decided to reduced the amount of ideas I have implemented with my limited timeframe. 
+- Initial stage of planning was easy for me but later I have  decided to reduce the amount of ideas I have implemented with my limited timeframe. 
 
 - I have created a simple tic-box schedule with my MS project knowledge and I wanted to keep a track of my progress with tasks that I have planned.
 
@@ -38,8 +38,7 @@ HTML was used for building the content of the website, CSS for styling and JS fo
 - Animations
 - media query to include CSS properties if the screens max width is 800px shows color changes. 
 
--  I was so happy to show my daughter the game board with her favourite pastel colors and animated shadow box lines.
- How it worked. 
+ 
 
 ## :scream: Bugs to fix :poop:
 - Anything a little broken (Draw condition was not succesful until I clearoff the click turn/ realized a pop up text box to fill in players names than a prompt is better to keep a record)
