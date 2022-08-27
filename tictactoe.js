@@ -3,7 +3,7 @@
     var winningCombos= [["b0", "b1", "b2"], ["b3", "b4", "b5"], ["b6", "b7", "b8"], ["b0", "b4", "b8"], ["b2", "b4", "b6"], ["b0", "b3", "b6"], ["b1", "b4","b7"],["b2", "b5", "b8"]];
 
     
-    var currentPlayer = 'X';
+   
     const player1 = 'X';
     const player2 = 'O';
 
@@ -12,11 +12,11 @@
     board.addEventListener('click', function(event) { 
     let box = event.target;
     console.log(box.textContent)
-      if (box.tagName === "DIV" && box.textContent != 'O' && box.textContent != 'X') {
+      if (box.tagName === "DIV" && box.textContent != player2 && box.textContent != player1) {
         if(turnCounter % 2 === 0) {
-          box.textContent = 'X';
+          box.textContent = player1;
         } else {
-          box.textContent = 'O';
+          box.textContent = player2;
         }
         //Increment count on each click
         turnCounter++
@@ -26,37 +26,37 @@
     })
     
     function winningCondition () {
-      if (b0.textContent === 'X' && b1.textContent === 'X' && b2.textContent === 'X') {
+      if (b0.textContent === player1 && b1.textContent === player1 && b2.textContent === player1) {
         document.querySelector('#boxTop').textContent = 'Winner';
-      } else if (b3.textContent === 'X' && b4.textContent === 'X' && b5.textContent === 'X' ){
+      } else if (b3.textContent === player1 && b4.textContent === player1 && b5.textContent === player1 ){
         document.querySelector('#boxTop').textContent = 'Winner';
-      } else if (b6.textContent === 'X' && b7.textContent === 'X' && b8.textContent === 'X' ){
+      } else if (b6.textContent === player1 && b7.textContent === player1 && b8.textContent === player1 ){
         document.querySelector('#boxTop').textContent = 'Winner';
-      } else if (b0.textContent === 'X' && b4.textContent === 'X' && b8.textContent === 'X' ){
+      } else if (b0.textContent === player1 && b4.textContent === player1 && b8.textContent === player1 ){
         document.querySelector('#boxTop').textContent = 'Winner';
-      } else if (b2.textContent === 'X' && b4.textContent === 'X' && b6.textContent === 'X' ){
+      } else if (b2.textContent === player1 && b4.textContent === player1 && b6.textContent === player1 ){
         document.querySelector('#boxTop').textContent = 'Winner';
-      } else if (b0.textContent === 'X' && b3.textContent === 'X' && b6.textContent === 'X' ){
+      } else if (b0.textContent === player1 && b3.textContent === player1 && b6.textContent === player1 ){
         document.querySelector('#boxTop').textContent = 'Winner';
-      } else if (b1.textContent === 'X' && b4.textContent === 'X' && b7.textContent === 'X' ){
+      } else if (b1.textContent === player1 && b4.textContent === player1 && b7.textContent === player1 ){
         document.querySelector('#boxTop').textContent = 'Winner';
-      } else if (b2.textContent === 'X' && b5.textContent === 'X' && b8.textContent === 'X' ){
+      } else if (b2.textContent === player1 && b5.textContent === player1 && b8.textContent === player1 ){
         document.querySelector('#boxTop').textContent = 'Winner';
-      } else if (b0.textContent === 'O' && b1.textContent === 'O' && b2.textContent === 'O') {
+      } else if (b0.textContent === player2 && b1.textContent === player2 && b2.textContent === player2) {
         document.querySelector('#boxBottom').textContent = 'Winner';
-      } else if (b3.textContent === 'O' && b4.textContent === 'O' && b5.textContent === 'O' ){
+      } else if (b3.textContent === player2 && b4.textContent === player2 && b5.textContent === player2 ){
           document.querySelector('#boxBottom').textContent = 'Winner';
-      } else if (b6.textContent === 'O' && b7.textContent === 'O' && b8.textContent === 'O' ){
+      } else if (b6.textContent === player2 && b7.textContent === player2 && b8.textContent === player2 ){
           document.querySelector('#boxBottom').textContent = 'Winner';
-      } else if (b0.textContent === 'O' && b4.textContent === 'O' && b8.textContent === 'O' ){
+      } else if (b0.textContent === player2 && b4.textContent === player2 && b8.textContent === player2 ){
           document.querySelector('#boxBottom').textContent = 'Winner';
-      } else if (b2.textContent === 'O' && b4.textContent === 'O' && b6.textContent === 'O' ){
+      } else if (b2.textContent === player2 && b4.textContent === player2 && b6.textContent === player2 ){
           document.querySelector('#boxBottom').textContent = 'Winner';
-      } else if (b0.textContent === 'O' && b3.textContent === 'O' && b6.textContent === 'O' ){
+      } else if (b0.textContent === player2 && b3.textContent === player2 && b6.textContent === player2 ){
           document.querySelector('#boxBottom').textContent = 'Winner';
-      } else if (b1.textContent === 'O' && b4.textContent === 'O' && b7.textContent === 'O'){
+      } else if (b1.textContent === player2 && b4.textContent === player2 && b7.textContent === player2){
           document.querySelector('#boxBottom').textContent = 'Winner';
-      } else if (b2.textContent === 'O' && b5.textContent === 'O' && b8.textContent === 'O' ){
+      } else if (b2.textContent === player2 && b5.textContent === player2 && b8.textContent === player2 ){
           document.querySelector('#boxBottom').textContent = 'Winner';
       } else if(turnCounter === 9) {
         document.querySelector('#boxTop').textContent = 'Draw';
@@ -78,6 +78,7 @@
       document.querySelector('#boxBottom').textContent = '';
       document.querySelector('#player1Name').textContent = '';
       document.querySelector('#player2Name').textContent = '';
+      turnCounter = 0;
 
       var playerOne = prompt('Enter your Name?')
       document.querySelector('#player1Name').textContent = playerOne;
